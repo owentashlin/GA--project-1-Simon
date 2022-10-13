@@ -1,0 +1,42 @@
+#center {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#the-wheel {
+    width: 400px;
+    height: 400px;
+    background-color: darkgray;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+#green-quadrant {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border-radius: 200px 0 0 0;
+}
+
+#yellow-quadrant {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 0 0 0 200px;
+}
+
+#red-quadrant {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 0 200px 0 0;
+}
+
+#blue-quadrant {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border-radius: 0 0 200px 0;
+}
