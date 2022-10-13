@@ -1,7 +1,7 @@
 Simon Game README
 
 WIREFRAME
-![simon game wireframe](simon-game-wireframe.jpg)
+![simon game wireframe](images/simon-game-wireframe.jpg)
 
 CODE
 ```
