@@ -8,6 +8,8 @@ const yelButton = document.querySelector('#yellow-quad')
 
 //functions
 
+
+
 //click functions
 clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
@@ -45,4 +47,6 @@ grnButton.addEventListener('click', clickGrnBtn)
 redButton.addEventListener('click', clickRedBtn)
 bluButton.addEventListener('click', clickBluBtn)
 yelButton.addEventListener('click', clickYelBtn)
+
+
 
