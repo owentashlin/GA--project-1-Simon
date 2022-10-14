@@ -4,16 +4,15 @@ body {
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    border: 2px solid black;
+    border: 1px dotted black;
 }
 
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    grid-area: 1 / 1 / 2 / 5;
+    grid-area: 1 / 1 / 2 / 7;
     font-size: 50px;  
-    text-align: right;
-    width: 600px;
-    border: 2px solid black;
+    text-align: center;
+    border: 1px dotted black;
 }
 
 #the-wheel {
@@ -54,7 +53,7 @@ h1{
     box-shadow: inset 5px 5px 5px -3px rgb(63, 2, 2), inset 5px -5px 5px -3px  rgb(63, 2, 2),inset -5px 5px 15px -3px rgb(63, 2, 2);
 }
 
-#green-quad {
+#green-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(0, 61, 0);
@@ -63,7 +62,7 @@ h1{
     box-shadow: inset 5px 5px 25px -3px green, inset 5px -5px 25px -3px green, inset -5px 5px 25px -3px green;
 }
 
-#yellow-quad {
+#yellow-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(43, 43, 1);
@@ -74,7 +73,7 @@ h1{
     box-shadow: inset 5px 5px 25px -3px gold,inset 5px -5px 25px -3px gold, inset -5px 5px 25px -3px gold;
 }
 
-#red-quad {
+#red-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(64, 1, 1);
@@ -84,7 +83,7 @@ h1{
     box-shadow: inset 5px 5px 25px -3px red, inset 5px -5px 25px -3px red, inset -5px 5px 25px -3px red;
 }
 
-#blue-quad {
+#blue-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(2, 2, 83);
@@ -99,36 +98,40 @@ h1{
     grid-area: 2 / 5 / 6 / 7;
     height: 400px;
     width: 200px; 
-    margin: 10px 0 10px 20px;
-    border: 2px solid black;
+    padding: 10px;
+    border: 1px dotted black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 36px;
     text-align: center;
 }
 
 #level {
-    grid-area: 6 / 1 / 7 / 8;
-    border: 2px solid black;
+    grid-area: 6 / 1 / 7 / 5;
+    border: 1px dotted black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
-    text-align: center; 
+    padding-right: 10px;
+    text-align: right; 
 }
 
 #level-display {
-    grid-area: 6 / 5 / 6 / 9;
-    border: 2px solid black;
+    grid-area: 6 / 5 / 6 / 6;
+    border: 1px dotted black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    padding-left: 10px;
 }
 
-#green-quad:hover {
+#green-btn:hover {
     background-color: rgb(1, 85, 1);
 }
-#red-quad:hover {
+#red-btn:hover {
     background-color: rgb(140, 0, 0);
 }
-#blue-quad:hover {
+#blue-btn:hover {
     background-color: rgb(0, 0, 138);
 }
-#yellow-quad:hover {
+#yellow-btn:hover {
     background-color: rgb(119, 119, 1);
 }
 

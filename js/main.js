@@ -1,29 +1,36 @@
 console.log('hello')
 
-//elements
+//**elements**//
 
-// buttons
-const grnButton = document.querySelector('#green-quad')
-const redButton = document.querySelector('#red-quad')
-const bluButton = document.querySelector('#blue-quad')
-const yelButton = document.querySelector('#yellow-quad')
+//buttons
+const grnButton = document.querySelector('#green-btn')
+const redButton = document.querySelector('#red-btn')
+const bluButton = document.querySelector('#blue-btn')
+const yelButton = document.querySelector('#yellow-btn')
 const startButton = document.querySelector('#start-button')
 
 //gameplay elements
 let gameSequence = []
 let playerSequence = []
-
 let level = 0
-const
-//functions
 
+const buttons = ['green', 'red', 'blue', 'yellow']
+let randomBtn = buttons[Math.floor(Math.random() * buttons.length)]
+
+//**functions**//
+
+//gameplay functions
 nextLevel = function() {
+    gameSequence.push(randomBtn)
     level += 1
+    console.log(gameSequence, level)
 }
+
 
 
 //click functions
 clickStartBtn = function () {
+    nextLevel()
     startButton.style.color = 'red'
     console.log('start button clicked')
 }
@@ -35,6 +42,7 @@ clickGrnBtn = function() {
       }, 500);
     console.log('green button clicked')
 }
+
 clickRedBtn = function() {
     redButton.style.backgroundColor = '#ff0000'
     setTimeout(() => {
@@ -42,6 +50,7 @@ clickRedBtn = function() {
       }, 500);
     console.log('red button clicked')
 }
+
 clickBluBtn = function() {
     bluButton.style.backgroundColor = '#0000ff'
     setTimeout(() => {
@@ -49,6 +58,7 @@ clickBluBtn = function() {
       }, 500);
     console.log('blue button clicked')
 }
+
 clickYelBtn = function() {
     yelButton.style.backgroundColor = '#ffff00'
     setTimeout(() => {
@@ -57,7 +67,7 @@ clickYelBtn = function() {
     console.log('yellow button clicked')
 }
 
-//event listeners
+//**event listeners**//
 
 //click listeners
 grnButton.addEventListener('click', clickGrnBtn)
@@ -65,6 +75,3 @@ redButton.addEventListener('click', clickRedBtn)
 bluButton.addEventListener('click', clickBluBtn)
 yelButton.addEventListener('click', clickYelBtn)
 startButton.addEventListener('click', clickStartBtn)
-
-
-
