@@ -9,8 +9,12 @@
 
 - need a function that compares the player array to the game array, if matching, reset game and click up to next level
 
+
 *Changes/Fixes*
 - change color changes in js to classes and set up toggle on click
 
 - fix window sizing, consider mobile view options?
 
+
+*Stretch*
+- add tone on button click and mute buttonß

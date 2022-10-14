@@ -1,17 +1,25 @@
 console.log('hello')
 
 //elements
+
+// buttons
 const grnButton = document.querySelector('#green-quad')
 const redButton = document.querySelector('#red-quad')
 const bluButton = document.querySelector('#blue-quad')
 const yelButton = document.querySelector('#yellow-quad')
 const startButton = document.querySelector('#start-button')
 
+//gameplay elements
 let gameSequence = []
 let playerSequence = []
 
+let level = 0
+const
 //functions
 
+nextLevel = function() {
+    level += 1
+}
 
 
 //click functions
