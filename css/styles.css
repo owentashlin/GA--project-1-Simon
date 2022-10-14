@@ -60,7 +60,7 @@ h1{
 #red-quad {
     width: 197px;
     height: 197px;
-    background-color: red;
+    background-color: darkred;
     border-radius: 0 200px 0 0;
     margin: 0 0 0 0px;
     border: 2px solid black;
@@ -98,4 +98,8 @@ h1{
 #level-display {
     grid-area: 6 / 5 / 6 / 9;
     border: 2px solid black;
+}
+
+#red-quad:hover {
+    background-color: red;
 }
