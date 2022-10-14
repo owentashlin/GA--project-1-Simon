@@ -1,8 +1,19 @@
-#center {
-    width: 150px;
-    height: 150px;
-    background-color: black;
-    border-radius: 50%;
+body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 2px solid black;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    grid-area: 1 / 1 / 2 / 9;
+    font-size: 50px;  
+    text-align: right;
+    width: 600px;
+    border: 2px solid black;
 }
 
 #the-wheel {
@@ -11,32 +22,80 @@
     background-color: darkgray;
     border-radius: 50%;
     border: 5px solid black;
+    display: flex;
+    flex-direction: center;
+    grid-area: 2 / 1 / 6 / 5; 
+    justify-self: center;
+    margin: 15px;
+    position: relative;
 }
 
-#green-quadrant {
-    width: 200px;
-    height: 200px;
+#center {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    margin: 125px;
+}
+
+#green-quad {
+    width: 197px;
+    height: 197px;
     background-color: green;
     border-radius: 200px 0 0 0;
+    border: 2px solid black;
 }
 
-#yellow-quadrant {
-    width: 200px;
-    height: 200px;
+#yellow-quad {
+    width: 197px;
+    height: 197px;
     background-color: yellow;
     border-radius: 0 0 0 200px;
+    border: 2px solid black; 
+    position: absolute;
+    margin: 200px 0 0 0;
 }
 
-#red-quadrant {
-    width: 200px;
-    height: 200px;
+#red-quad {
+    width: 197px;
+    height: 197px;
     background-color: red;
     border-radius: 0 200px 0 0;
+    margin: 0 0 0 0px;
+    border: 2px solid black;
 }
 
-#blue-quadrant {
-    width: 200px;
-    height: 200px;
+#blue-quad {
+    width: 197px;
+    height: 197px;
     background-color: blue;
     border-radius: 0 0 200px 0;
+    border: 2px solid black;
+    position: absolute;
+    margin: 200px 0 0 200px;
+}
+
+#instructions {
+    grid-area: 2 / 5 / 6 / 7;
+    height: 400px;
+    width: 200px; 
+    margin: 10px 0 10px 20px;
+    border: 2px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+#level {
+    grid-area: 6 / 1 / 7 / 8;
+    border: 2px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    text-align: center; 
+}
+
+#level-display {
+    grid-area: 6 / 5 / 6 / 9;
+    border: 2px solid black;
 }
