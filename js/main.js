@@ -5,12 +5,21 @@ const grnButton = document.querySelector('#green-quad')
 const redButton = document.querySelector('#red-quad')
 const bluButton = document.querySelector('#blue-quad')
 const yelButton = document.querySelector('#yellow-quad')
+const startButton = document.querySelector('#start-button')
+
+let gameSequence = []
+let playerSequence = []
 
 //functions
 
 
 
 //click functions
+clickStartBtn = function () {
+    startButton.style.color = 'red'
+    console.log('start button clicked')
+}
+
 clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
     setTimeout(() => {
@@ -47,6 +56,7 @@ grnButton.addEventListener('click', clickGrnBtn)
 redButton.addEventListener('click', clickRedBtn)
 bluButton.addEventListener('click', clickBluBtn)
 yelButton.addEventListener('click', clickYelBtn)
+startButton.addEventListener('click', clickStartBtn)
 
 
 

@@ -12,4 +12,5 @@
 *Changes/Fixes*
 - change color changes in js to classes and set up toggle on click
 
-- 
+- fix window sizing, consider mobile view options?
+
