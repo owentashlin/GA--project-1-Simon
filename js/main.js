@@ -1,4 +1,4 @@
-console.log('hello')
+console.log('wtf are we doing here?')
 
 //**elements**//
 
@@ -8,24 +8,25 @@ const redButton = document.querySelector('#red-btn')
 const bluButton = document.querySelector('#blue-btn')
 const yelButton = document.querySelector('#yellow-btn')
 const startButton = document.querySelector('#start-button')
+const resetButton = document.querySelector('#reset-button')
 
 //gameplay elements
 let gameSequence = []
 let playerSequence = []
 let level = 0
 
-
-
 //**functions**//
 
 //gameplay functions
 nextLevel = function() {
     let colors = ['green', 'red', 'blue', 'yellow']
+    //get random color for gameplay
     let randomClr = colors[Math.floor(Math.random() * colors.length)]
-    console.log(randomClr)
-    //gameSequence.push(randomClr)
-    //level += 1
+    //push color into game array
+    gameSequence.push(randomClr)
     //when level goes up, number of randomBtn's returned goes up to match level#
+    level += 1
+    console.log(gameSequence, level)
 }
 
 clickStartBtn = function () {
@@ -35,13 +36,23 @@ clickStartBtn = function () {
 }
 
 playerTurn = function() {
-    //player clicks buttons, loads into playerSequence[]
+    //player clicks buttons, 
+    //loads into playerSequence[]
+    playerSequence.push(playerTurn)
     //forEach playerSequence[]
     //if match gameSequence[]
     //nextLevel is called
 }
 
-//click functions
+clickResetBtn = function() {
+    gameSequence = []
+    playerSequence = []
+    level = 0
+    startButton.style.color = 'rgb(0, 133, 133)'
+    console.log(gameSequence, playerSequence, level, 'reset button clicked')
+}
+
+//color button functions - until we figure out how to do it better, with fucking toggle
 
 clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
@@ -83,3 +94,4 @@ redButton.addEventListener('click', clickRedBtn)
 bluButton.addEventListener('click', clickBluBtn)
 yelButton.addEventListener('click', clickYelBtn)
 startButton.addEventListener('click', clickStartBtn)
+resetButton.addEventListener('click', clickResetBtn)

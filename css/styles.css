@@ -48,9 +48,21 @@ h1{
     color: rgb(0, 133, 133);
     text-align: center;
     border: 1px solid rgb(69, 69, 69);
-    margin: 172px 0 0 150px;
+    margin: 160px 0 0 150px;
     padding: 5px;
     border-radius: 10px;
+    box-shadow: inset 5px 5px 5px -3px rgb(63, 2, 2), inset 5px -5px 5px -3px  rgb(63, 2, 2),inset -5px 5px 15px -3px rgb(63, 2, 2);
+}
+
+#reset-button {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 133, 133);
+    margin: 225px 0 0 170px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
     box-shadow: inset 5px 5px 5px -3px rgb(63, 2, 2), inset 5px -5px 5px -3px  rgb(63, 2, 2),inset -5px 5px 15px -3px rgb(63, 2, 2);
 }
 
@@ -127,7 +139,7 @@ h1{
 }
 
 #green-btn:hover {
-    background-color: rgb(1, 85, 1);
+    background-color: rgb(0, 74, 0);
 }
 #red-btn:hover {
     background-color: rgb(140, 0, 0);
@@ -141,4 +153,10 @@ h1{
 
 #start-button:hover {
     background-color: rgb(0, 148, 148);
+    color: black;
+}
+
+#reset-button:hover {
+    background-color: rgb(0, 148, 148);
+    color: black;
 }
