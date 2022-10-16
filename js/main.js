@@ -14,17 +14,24 @@ let gameSequence = []
 let playerSequence = []
 let level = 0
 
-const buttons = ['green', 'red', 'blue', 'yellow']
-let randomBtn = buttons.map[Math.floor(Math.random() * buttons.length)]
+
 
 //**functions**//
 
 //gameplay functions
 nextLevel = function() {
-    gameSequence.push(randomBtn)
-    level += 1
+    let colors = ['green', 'red', 'blue', 'yellow']
+    let randomClr = colors[Math.floor(Math.random() * colors.length)]
+    console.log(randomClr)
+    //gameSequence.push(randomClr)
+    //level += 1
     //when level goes up, number of randomBtn's returned goes up to match level#
-    console.log(gameSequence, level)
+}
+
+clickStartBtn = function () {
+    nextLevel()
+    startButton.style.color = 'red'
+    console.log('start button clicked')
 }
 
 playerTurn = function() {
@@ -35,11 +42,6 @@ playerTurn = function() {
 }
 
 //click functions
-clickStartBtn = function () {
-    nextLevel()
-    startButton.style.color = 'red'
-    console.log('start button clicked')
-}
 
 clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
