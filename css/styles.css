@@ -7,14 +7,20 @@ body {
     border: 1px dotted black;
 } 
 
+header {
+    position: absolute
+    grid-area: ;
+}
+
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(180, 43, 226);
     grid-area: 1 / 1 / 2 / 7;
     font-size: 50px;  
     text-align: center;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 }
+
 
 #the-wheel {
     width: 400px;
@@ -61,7 +67,7 @@ h1{
     color: rgb(0, 133, 133);
     margin: 225px 0 0 170px;
     padding: 5px;
-    border: 1px solid grey;
+    border: 1px solid rgb(69, 69, 69);
     border-radius: 5px;
     box-shadow: inset 5px 5px 5px -3px rgb(63, 2, 2), inset 5px -5px 5px -3px  rgb(63, 2, 2),inset -5px 5px 15px -3px rgb(63, 2, 2);
 }
@@ -112,21 +118,23 @@ h1{
     height: 400px;
     width: 200px; 
     padding: 10px;
-    border: 1px dotted black;
+    /*border: 1px dotted black;*/
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(191, 0, 255);
     font-size: 36px;
     text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 #level {
-    grid-area: 6 / 1 / 7 / 5;
+    grid-area: 6 / 2 / 7 / 5;
     border: 1px dotted black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(230, 156, 255);
     font-size: 40px;
     padding-right: 10px;
-    text-align: right; 
+    text-align: right;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)) 
 }
 
 #level-display {
@@ -136,6 +144,7 @@ h1{
     color: rgb(230, 156, 255);
     font-size: 40px;
     padding-left: 10px;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0))
 }
 
 #green-btn:hover {
