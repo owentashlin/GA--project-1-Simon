@@ -3,13 +3,15 @@
 *Game Play* 
 - need an automatic sequence where the game generates a pattern of colors
 
-need to find a random array[], push it into the current level array, then play that sequence over the buttons
+make random array[], push it into the current level array, then play that sequence over the buttons
 
 then player repeats that sequence and the arrays are compared
 
 if the same, new level loads with additional step
 
 - pattern needs to load into an array
+
+- pattern lights up buttons
 
 - need a function that loads player clicks into an array
 
@@ -19,8 +21,9 @@ if the same, new level loads with additional step
 *Changes/Fixes*
 - change color changes in js to classes and set up toggle on click
 
-- fix window sizing, consider mobile view options?
+- fix window sizing, consider mobile view options? - partially complete - need to work out mobile options
 
+For Monday: work out toggles and see how that performs with player and game functions differently than button press functions
 
 *Stretch*
 - add tone on button click and mute button
