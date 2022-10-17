@@ -1,52 +1,60 @@
-console.log("sigh... Let's try this again.")
+console.log("still going... haven't given up yet!")
 
 //**elements**//
 
 //buttons
-const grnButton = document.querySelector('#green-btn')
-const redButton = document.querySelector('#red-btn')
-const bluButton = document.querySelector('#blu-btn')
-const yelButton = document.querySelector('#yellow-btn')
-const startButton = document.querySelector('#start-button')
-const resetButton = document.querySelector('#reset-button')
+const grnButton = document.querySelector('.grn-btn')
+const redButton = document.querySelector('.red-btn')
+const bluButton = document.querySelector('.blu-btn')
+const yelButton = document.querySelector('.yel-btn')
+const startButton = document.querySelector('.start-button')
+const resetButton = document.querySelector('.reset-button')
 
 //**functions**//
 
 //color button functions - until we figure out how to do it better, with a toggle
 clickGrnBtn = function() {
-    grnButton.style.backgroundColor = '#03cb03';
+    grnButton.classList.toggle('.grn-btn-lit')
+    //grnButton.style.backgroundColor = '#03cb03';
     setTimeout(() => {
-        grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
+        grnButton.classList.toggle('.grn-btn')
+        //grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
       }, 500);
-      playerSequence.push('green')
-    console.log(playerSequence, 'green button clicked')
+      //playerSequence.push('green')
+    console.log('green clicked')
 }
 
 clickRedBtn = function() {
-    redButton.style.backgroundColor = '#ff0000'
+    redButton.classList.toggle('.red-btn-lit')
+    //redButton.style.backgroundColor = '#ff0000'
     setTimeout(() => {
-        redButton.style.backgroundColor = 'rgb(64, 1, 1)'
+        redButton.classList.toggle('.red-btn')
+        //redButton.style.backgroundColor = 'rgb(64, 1, 1)'
       }, 500);
-      playerSequence.push('red')
-    console.log(playerSequence, 'red button clicked')
+      //playerSequence.push('red')
+    console.log('red clicked')
 }
 
 clickBluBtn = function() {
-    bluButton.style.backgroundColor = '#0000ff'
+    bluButton.classList.toggle('.blu-btn-lit')
+    //bluButton.style.backgroundColor = '#0000ff'
     setTimeout(() => {
-        bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
+        bluButton.classList.toggle('blu.btn')
+        //bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
     }, 500);
-        playerSequence.push('blue')
-    console.log(playerSequence, 'blue button clicked')
+        //playerSequence.push('blue')
+    console.log('blue clicked')
 }
 
 clickYelBtn = function() {
-    yelButton.style.backgroundColor = '#ffff00'
+    yelButton.classList.toggle('yel-btn-lit')
+    //yelButton.style.backgroundColor = '#ffff00'
     setTimeout(() => {
-        yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
+        yelButton.classList.toggle('yel-btn')
+        //yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
       }, 500);
-      playerSequence.push('yellow')
-    console.log(playerSequence, 'yellow button clicked')
+        //playerSequence.push('yellow')
+    console.log('yellow clicked')
 }
 
 //gameplay functions- currently a HOT mess...
@@ -70,7 +78,7 @@ playerTurn = function() {
     //clickBluBtn()
     //clickYelBtn()
 // button color pushed into playerSequence
-
+    
 // playerSequence is compared to gameSequence
     for (i = 0; i < playerSequence.length; i++) {
         if (gameSequence[i] !== playerSequence[i]) {
@@ -95,33 +103,33 @@ nextLevel = function() {
 // random color lights up buttons and pushes into gameSequence 
     if (gameSequence[i] = 'green') {
         lightGrnBtn = function() {
-            grnButton.style.backgroundColor = '#03cb03';
+            //grnButton.style.backgroundColor = '#03cb03';
             setTimeout(() => {
-                grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
+                //grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
               }, 500);
               gameSequence.push('green')
         }
     } else if (randomClr = 'red') {
         lightRedBtn = function() {
-            redButton.style.backgroundColor = '#ff0000'
+            //redButton.style.backgroundColor = '#ff0000'
             setTimeout(() => {
-                redButton.style.backgroundColor = 'rgb(64, 1, 1)'
+                //redButton.style.backgroundColor = 'rgb(64, 1, 1)'
               }, 500);
               gameSequence.push('red')
         } 
     } else if (randomClr = 'blue') {
         lightBluBtn = function() {
-            bluButton.style.backgroundColor = '#0000ff'
+            //bluButton.style.backgroundColor = '#0000ff'
             setTimeout(() => {
-                bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
+                //bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
             }, 500);
                 gameSequence.push('blue')
         }
     } else if (randomClr = 'yellow') {
         lightYelBtn = function() {
-            yelButton.style.backgroundColor = '#ffff00'
+            //yelButton.style.backgroundColor = '#ffff00'
             setTimeout(() => {
-                yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
+                //yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
               }, 500);
               gameSequence.push('yellow')
         }
@@ -203,9 +211,9 @@ nextLevel = function() {
 clickResetBtn = function() {
     gameSequence = []
     playerSequence = []
-    level = 0
+    level = 1
     startButton.style.color = 'rgb(0, 133, 133)'
-    console.log(gameSequence, playerSequence, level, 'reset button clicked')
+    console.log(gameSequence, playerSequence, 'level ' + level, 'reset clicked')
 }
 
 //**event listeners**//
