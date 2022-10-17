@@ -1,38 +1,32 @@
 body {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    border: 1px dotted black;
-} 
-
-header {
-    position: absolute
-    grid-area: ;
-}
+    max-width: 1000px;
+    min-width: 800px;
+    }
 
 h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    grid-area: 1 / 1 / 2 / 5;
+    font-family: 'Silkscreen', cursive;
     color: rgb(180, 43, 226);
-    grid-area: 1 / 1 / 2 / 7;
     font-size: 50px;  
     text-align: center;
-    /* border: 1px dotted black; */
+    padding: 25px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)) 
 }
 
-
 #the-wheel {
+    grid-area: 2 / 1 / 5 / 4;
     width: 400px;
     height: 400px;
     background-color: black;
     border-radius: 50%;
     border: 25px solid black;
     display: flex;
-    flex-direction: center;
-    grid-area: 2 / 1 / 6 / 5; 
-    justify-self: center;
-    margin: 15px;
+    margin-left: 75px;
     position: relative;
 }
 
@@ -114,37 +108,24 @@ h1{
 }
 
 #instructions {
-    grid-area: 2 / 5 / 6 / 7;
-    height: 400px;
-    width: 200px; 
+    grid-area: 2 / 4 / 4 / 5;
     padding: 10px;
     /*border: 1px dotted black;*/
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Silkscreen', cursive;
     color: rgb(191, 0, 255);
     font-size: 36px;
-    text-align: center;
+    text-align: left;
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
-#level {
-    grid-area: 6 / 2 / 7 / 5;
-    border: 1px dotted black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(230, 156, 255);
+#level-counter {
+    grid-area: 4 / 4 / 4 / 5;
+    font-family: 'Silkscreen', cursive;
+    color: rgb(191, 0, 255);
     font-size: 40px;
     padding-right: 10px;
-    text-align: right;
+    text-align: left;
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)) 
-}
-
-#level-display {
-    grid-area: 6 / 5 / 6 / 6;
-    border: 1px dotted black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(230, 156, 255);
-    font-size: 40px;
-    padding-left: 10px;
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0))
 }
 
 #green-btn:hover {

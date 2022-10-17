@@ -54,14 +54,20 @@ clickYelBtn = function() {
       playerSequence.push('yellow')
     console.log(playerSequence, 'yellow button clicked')
 }
+
 //gameplay functions
+
 nextLevel = function() {
     let colors = ['green', 'red', 'blue', 'yellow']
     //get random color for gameplay
     let randomClr = colors[Math.floor(Math.random() * colors.length)]
+    //random color lights up buttons on gameboard
     //push color into game array
     gameSequence.push(randomClr)
     //when level goes up, number of randomBtn's returned goes up to match level#
+    //level # is displayed in the level field on screen
+    let levelText = document.getElementById('#level-counter')
+    // levelText.textContent('level counter:' + level)
     console.log(gameSequence, level)
 }
 
