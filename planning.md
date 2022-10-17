@@ -25,6 +25,9 @@ if the same, new level loads with additional step
 
 For Monday: work out toggles and see how that performs with player and game functions differently than button press functions
 
+- need to disable the buttons until it is playerTurn
+    .unclickable - research how that works(stupid class toggles again... sigh.)
+
 *Stretch*
 - add tone on button click and mute button
 

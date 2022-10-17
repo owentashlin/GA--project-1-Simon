@@ -62,17 +62,44 @@ clickStartBtn = function() {
     console.log(gameSequence,'level ' + level)
 }
 
- nextLevel = function() {
+playerTurn = function() {
+// player clicks buttons, button lights up (and plays sound?)
+    
+    //clickGrnBtn()
+    //clickRedBtn()
+    //clickBluBtn()
+    //clickYelBtn()
+// button color pushed into playerSequence
+
+// playerSequence is compared to gameSequence
+    for (i = 0; i < playerSequence.length; i++) {
+        if (gameSequence[i] !== playerSequence[i]) {
+            goToNextLevel = false
+            console.log('try again')
+        } else {
+        goToNextLevel = true
+        console.log('move to the next level')
+        }
+    }
+// if no exact match loser message is displayed
+    if (goToNextLevel = true)
+        level += 1 
+// if match exact match, nextLevel is called
+    nextLevel()
+    console.log(playerSequence, level)
+}
+
+nextLevel = function() {
 // get random color for gameplay
      let randomClr = colors[Math.floor(Math.random() * colors.length)]
-// random color lights up buttons on gameboard and pushes into gameSequence array
+// random color lights up buttons and pushes into gameSequence 
     if (gameSequence[i] = 'green') {
         lightGrnBtn = function() {
             grnButton.style.backgroundColor = '#03cb03';
             setTimeout(() => {
                 grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
               }, 500);
-              //gameSequence.push('green')
+              gameSequence.push('green')
         }
     } else if (randomClr = 'red') {
         lightRedBtn = function() {
@@ -80,7 +107,7 @@ clickStartBtn = function() {
             setTimeout(() => {
                 redButton.style.backgroundColor = 'rgb(64, 1, 1)'
               }, 500);
-              //gameSequence.push('red')
+              gameSequence.push('red')
         } 
     } else if (randomClr = 'blue') {
         lightBluBtn = function() {
@@ -88,15 +115,15 @@ clickStartBtn = function() {
             setTimeout(() => {
                 bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
             }, 500);
-                //gameSequence.push('blue')
+                gameSequence.push('blue')
         }
     } else if (randomClr = 'yellow') {
-        clickYelBtn = function() {
+        lightYelBtn = function() {
             yelButton.style.backgroundColor = '#ffff00'
             setTimeout(() => {
                 yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
               }, 500);
-              //gameSequence.push('yellow')
+              gameSequence.push('yellow')
         }
     }
 // push color into game array
@@ -117,20 +144,60 @@ clickStartBtn = function() {
 }
 
 // playerTurn = function() {
-//     //  player clicks buttons, button lights up (and plays sound?)
-//     //  button color pushed into playerSequence
-//     //  playerSequence is compared to gameSequence
-//     for (i = 0; i < playerSequence.length; i++) {
-//         if (gameSequence[i] !== playerSequence[i]) {
-//             goToNextLevel = false
-//         }
-//     }
-//     //  if no exact match loser message is displayed   
-//     if (!goToNextLevel)
-//     level += 1 
-//     //  if match exact match, nextLevel is called
+// // player clicks buttons, button lights up (and plays sound?)
+// clickGrnBtn = function() {
+//     grnButton.style.backgroundColor = '#03cb03';
+//     setTimeout(() => {
+//         grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
+//       }, 500);
+//       playerSequence.push('green')
+//     console.log(playerSequence, 'green button clicked')
+// }
+
+// clickRedBtn = function() {
+//     redButton.style.backgroundColor = '#ff0000'
+//     setTimeout(() => {
+//         redButton.style.backgroundColor = 'rgb(64, 1, 1)'
+//       }, 500);
+//       playerSequence.push('red')
+//     console.log(playerSequence, 'red button clicked')
+// }
+
+// clickBluBtn = function() {
+//     bluButton.style.backgroundColor = '#0000ff'
+//     setTimeout(() => {
+//         bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
+//     }, 500);
+//         playerSequence.push('blue')
+//     console.log(playerSequence, 'blue button clicked')
+// }
+
+// clickYelBtn = function() {
+//     yelButton.style.backgroundColor = '#ffff00'
+//     setTimeout(() => {
+//         yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
+//       }, 500);
+//       playerSequence.push('yellow')
+//     console.log(playerSequence, 'yellow button clicked')
+// }
+
+// // button color pushed into playerSequence
+// // playerSequence is compared to gameSequence
+//       for (i = 0; i < playerSequence.length; i++) {
+//          if (gameSequence[i] !== playerSequence[i]) {
+//              goToNextLevel = false
+//              console.log('try again')
+//          } else {
+//             goToNextLevel = true
+//             console.log('move to the next level')
+//          }
+//      }
+// // if no exact match loser message is displayed
+//     if (goToNextLevel = true)
+//         level += 1 
+// // if match exact match, nextLevel is called
 //     nextLevel()
-//     console.log(playerSequence)
+//     console.log(playerSequence, level)
 // }
 
 clickResetBtn = function() {

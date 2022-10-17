@@ -8,7 +8,7 @@ body {
     min-width: 800px;
     }
 
-h1{
+h1 {
     grid-area: 1 / 1 / 2 / 5;
     font-family: 'Silkscreen', cursive;
     color: rgb(180, 43, 226);
@@ -16,6 +16,16 @@ h1{
     text-align: center;
     padding: 25px;
     background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)) 
+}
+
+h3 {
+    grid-area: 1 / 1 / 2 / 5;
+    font-family: 'Silkscreen', cursive;
+    color: rgb(180, 43, 226);
+    font-size: 12px;  
+    text-align: center;
+    margin-top: 95px;
+    padding: 25px;
 }
 
 #the-wheel {
@@ -154,7 +164,7 @@ h1{
     /*border: 1px dotted black;*/
     font-family: 'Silkscreen', cursive;
     color: rgb(191, 0, 255);
-    font-size: 36px;
+    font-size: 30px;
     text-align: left;
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
 }
