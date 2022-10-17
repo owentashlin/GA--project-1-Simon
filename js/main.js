@@ -54,25 +54,56 @@ clickYelBtn = function() {
 const colors = ['green', 'red', 'blue', 'yellow']
 let gameSequence = []
 let playerSequence = []
-let level = 1
+let level = 0
 
 clickStartBtn = function() {
     goToNextLevel = true
+    if (goToNextLevel = true) {
+        nextLevel()
     startButton.style.color = 'red'
     console.log('start button clicked')
 }
 
 nextLevel = function() {
+//get random color for gameplay
     let randomClr = colors[Math.floor(Math.random() * colors.length)]
+    for (i = 0; i < gameSequence.length; i++) {
+        if () {
+            
+        }
+    }
+// random color lights up buttons on gameboard
+    if (gameSequence[i] = 'green') {
+        grnButton.style.backgroundColor = '#03cb03';
+    setTimeout(() => {
+        grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
+      }, 500);
+      gameSequence.push('green')
+    } else if (randomClr = 'red') {
+        redButton.style.backgroundColor = '#ff0000'
+    setTimeout(() => {
+        redButton.style.backgroundColor = 'rgb(64, 1, 1)'
+      }, 500);
+      gameSequence.push('red')
+    } else if (randomClr = 'blue') {
+        bluButton.style.backgroundColor = '#0000ff'
+    setTimeout(() => {
+        bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
+    }, 500);
+        gameSequence.push('blue')
+    } else if (randomClr = 'yellow') {
+        yelButton.style.backgroundColor = '#ffff00'
+    setTimeout(() => {
+        yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
+      }, 500);
+      gameSequence.push('yellow')
+    }
+// when level goes up, number of randomBtn's returned goes up to match level#
+// push color into game array
     gameSequence.push(randomClr)
-//     get random color for gameplay
-//     random color lights up buttons on gameboard
-//     push color into game array
-    gameSequence.push(randomClr)
-//     when level goes up, number of randomBtn's returned goes up to match level#
-//    level # is displayed in the level field on screen
-//    let levelText = document.getElementById('#level-counter')
-//    levelText.innerText('level counter:' + level)
+// level # is displayed in the level field on screen
+// //   let levelText = document.getElementById('#level-counter')
+// //   levelText.innerText('level counter:' + level)
     console.log(gameSequence, level)
 }
 
@@ -105,7 +136,6 @@ clickResetBtn = function() {
 
 //**event listeners**//
 
-//click listeners
 grnButton.addEventListener('click', clickGrnBtn)
 redButton.addEventListener('click', clickRedBtn)
 bluButton.addEventListener('click', clickBluBtn)
