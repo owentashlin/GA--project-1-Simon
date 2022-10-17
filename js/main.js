@@ -1,4 +1,4 @@
-console.log('wtf are we doing here?')
+console.log("sigh... Let's try this again.")
 
 //**elements**//
 
@@ -17,7 +17,7 @@ let level = 0
 
 //**functions**//
 
-//color button functions - until we figure out how to do it better, with fucking toggle
+//color button functions - until we figure out how to do it better, with a toggle
 
 clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
@@ -71,7 +71,7 @@ nextLevel = function() {
     console.log(gameSequence, level)
 }
 
-clickStartBtn = function () {
+clickStartBtn = function() {
     nextLevel()
     startButton.style.color = 'red'
     console.log('start button clicked')
