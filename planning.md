@@ -1,13 +1,14 @@
 **NEXT STEPS**
 
 *Game Play* 
-- need an automatic sequence where the game generates a pattern of colors
+*complete* - need an automatic sequence where the game generates a pattern of colors
 
-make random array[], push it into the current level array, then play that sequence over the buttons
+*partially complete* - make random array[], push it into the current level array, then play that sequence over the buttons
+    - lights are currently all firing at once after level 1, need to work out delay structure so they fire one at a time
 
-then player repeats that sequence and the arrays are compared
+- then player repeats that sequence and the arrays are compared
 
-if the same, new level loads with additional step
+- if the same, new level loads with additional step
 
 - pattern needs to load into an array
 
@@ -21,15 +22,14 @@ if the same, new level loads with additional step
 *Changes/Fixes*
 - change color changes in js to classes and set up toggle on click
 
-- fix window sizing, consider mobile view options? - partially complete - need to work out mobile options
-
-For Monday: work out toggles and see how that performs with player and game functions differently than button press functions
+- *partially complete* - need to work out mobile options fix window sizing, consider mobile view options? 
 
 - need to disable the buttons until it is playerTurn
     .unclickable - research how that works(stupid class toggles again... sigh.)
 
 *Stretch*
 - add tone on button click and mute button
+- lower delay times on higher levels to increase difficulty
 
 <audio id="soundbuttonGre" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
 <audio id="soundbuttonRed" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
