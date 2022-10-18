@@ -45,13 +45,15 @@ gameTurn = function() {
     for (i = 0; i < level; i++) {
         SelectRandomColor() 
     }
-    playerTurn()
     console.log(gameSequence)
+    setTimeout(() => {
+        playerTurn()
+      }, 2500);
 }
 
 //player clicks buttons, loading answers into player array, when done, calls compareArrays function
 playerTurn = function () {
-    //player clicks buttons and loads player array
+    console.log('your turn')
     compareArrays()
 }
 
