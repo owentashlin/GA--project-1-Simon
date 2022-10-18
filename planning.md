@@ -18,6 +18,10 @@
 
 - need a function that compares the player array to the game array, if matching, reset game and click up to next level
 
+- need to tell game what max level is
+
+- need win animation
+
 
 *Changes/Fixes*
 - change color changes in js to classes and set up toggle on click
