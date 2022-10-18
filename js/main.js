@@ -76,29 +76,11 @@ clickResetBtn = function() {
 //**game play functions**\\
 
 gameTurn = function() {
-// get random color for gameplay
-let randomClr = colors[Math.floor(Math.random() * colors.length)]
-// random color lights up buttons and 
-    if (randomClr === 'green') {
-        lightGrnBtn() 
-    } else if (randomClr === 'red') {
-        lightRedBtn()
-    } else if (randomClr === 'blue') {
-        lightBluBtn()
-    } else if (randomClr === 'yellow') {
-        lightYelBtn()
-        }
-//pushes into gameSequence 
-    gameSequence.push(randomClr)
-    console.log(gameSequence, level)
 //game iterates through array, repeats finding colors until number of items in array equals level#    
-// for (i = 0; i < gameSequence.length; i++) {
-//     if (gameSequence.length < level) {
-// //... something goes here
-// } 
-// // when level goes up, number of randomBtn's returned goes up to match level#
-// // console to check any of this crap is working...    
-//     }
+    for (i = 0; i < level; i++) {
+        SelectRandomColor() 
+    }
+    console.log(gameSequence, level)
 }
 
 playerTurn = function() {
@@ -130,6 +112,26 @@ playerTurn = function() {
 
 //button and light functions
 
+// get random color for gameplay
+let SelectRandomColor = function() {
+let randomClr = colors[Math.floor(Math.random() * colors.length)]
+// random color lights up buttons and 
+    if (randomClr === 'green') {
+        lightGrnBtn()
+        gameSequence.push('green')
+    } else if (randomClr === 'red') {
+        lightRedBtn()
+        gameSequence.push('red')
+    } else if (randomClr === 'blue') {
+        lightBluBtn()
+        gameSequence.push('blue')
+    } else if (randomClr === 'yellow') {
+        lightYelBtn()
+        gameSequence.push('yellow')
+        }
+}
+
+//light-up buttons
 lightGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03'
     setTimeout(() => {
