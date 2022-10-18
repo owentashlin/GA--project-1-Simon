@@ -76,7 +76,7 @@ h3 {
     box-shadow: inset 5px 5px 5px -3px rgb(63, 2, 2), inset 5px -5px 5px -3px  rgb(63, 2, 2),inset -5px 5px 15px -3px rgb(63, 2, 2);
 }
 
-#green-btn {
+.green-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(0, 43, 0);
@@ -85,16 +85,16 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px green, inset 5px -5px 25px -3px green, inset -5px 5px 25px -3px green;
 }
 
-/* #green-btn-lit {
+.green-btn-lit {
     width: 195px;
     height: 195px;
     background-color: #03cb03;
     border-radius: 200px 0px 0px 0px;
     border: 2px solid green;
     box-shadow: inset 5px 5px 25px -3px green, inset 5px -5px 25px -3px green, inset -5px 5px 25px -3px green;
-} */
+}
 
-#yellow-btn {
+.yellow-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(43, 43, 1);
@@ -105,7 +105,7 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px gold,inset 5px -5px 25px -3px gold, inset -5px 5px 25px -3px gold;
 }
 
-/* #yellow-btn-lit {
+/* .yellow-btn-lit {
     width: 195px;
     height: 195px;
     background-color: #ffff00;
@@ -116,7 +116,7 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px gold,inset 5px -5px 25px -3px gold, inset -5px 5px 25px -3px gold;
 } */
 
-#red-btn {
+.red-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(64, 1, 1);
@@ -126,7 +126,7 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px red, inset 5px -5px 25px -3px red, inset -5px 5px 25px -3px red;
 }
 
-/* #red-btn-lit {
+/* .red-btn-lit {
     width: 195px;
     height: 195px;
     background-color: red;
@@ -136,7 +136,7 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px red, inset 5px -5px 25px -3px red, inset -5px 5px 25px -3px red;
 } */
 
-#blu-btn {
+.blue-btn {
     width: 195px;
     height: 195px;
     background-color: rgb(2, 2, 83);
@@ -147,7 +147,7 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px blue,inset 5px -5px 25px -3px  blue,inset -5px 5px 25px -3px blue;
 }
 
-/* #blu-btn-lit {
+/* .blu-btn-lit {
     width: 195px;
     height: 195px;
     background-color: blue;
@@ -179,19 +179,19 @@ h3 {
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)) 
 }
 
-#green-btn:hover {
+.green-btn:hover {
     background-color: rgb(0, 74, 0);
 }
 
-#red-btn:hover {
+.red-btn:hover {
     background-color: rgb(140, 0, 0);
 }
 
-#blu-btn:hover {
+.blu-btn:hover {
     background-color: rgb(0, 0, 138);
 }
 
-#yellow-btn:hover {
+.yellow-btn:hover {
     background-color: rgb(119, 119, 1);
 }
 

@@ -3,10 +3,10 @@ console.log("still going... haven't given up yet!")
 //**elements**//
 
 //buttons
-const grnButton = document.querySelector('#green-btn')
-const redButton = document.querySelector('#red-btn')
-const bluButton = document.querySelector('#blu-btn')
-const yelButton = document.querySelector('#yellow-btn')
+const grnButton = document.querySelector('.green-btn')
+const redButton = document.querySelector('.red-btn')
+const bluButton = document.querySelector('.blue-btn')
+const yelButton = document.querySelector('.yellow-btn')
 const startButton = document.querySelector('#start-button')
 const resetButton = document.querySelector('#reset-button')
 
@@ -32,7 +32,7 @@ clickRedBtn = function() {
 }
 
 clickBluBtn = function() {
-    bluButton.style.backgroundColor = '#0000ff'
+    bluButton.style.backgroundColor = 'rgb(0, 38, 255)'
     setTimeout(() => {
         bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
     }, 500);
