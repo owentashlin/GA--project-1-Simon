@@ -1,4 +1,4 @@
-console.log("cautiously optimistic... likely a trap.")
+console.log("bugs! bugs, everywhere! AAAAAAA!!!!!")
 
 //**elements**//
 
@@ -12,7 +12,7 @@ const resetButton = document.querySelector('#reset-button')
 const colors = ['green', 'red', 'blue', 'yellow']
 let gameSequence = []
 let playerSequence = []
-let level = 1  
+let level = 0  
 
 //**functions**//
 
@@ -32,7 +32,7 @@ clickStartBtn = function() {
 clickResetBtn = function() {
     gameSequence = []
     playerSequence = []
-    level = 1
+    level = 0
     updateLevel()
     startButton.style.color = 'rgb(0, 133, 133)'
     console.log(gameSequence, playerSequence, 'level ' + level, 'reset button clicked')
@@ -42,35 +42,43 @@ clickResetBtn = function() {
 
 gameTurn = function() {
 //game iterates through array, repeats finding colors until number of items in array equals level#    
+    level += 1 
     for (i = 0; i < level; i++) {
         SelectRandomColor() 
     }
     console.log(gameSequence)
     setTimeout(() => {
         playerTurn()
-      }, 2500);
+      }, 2000);
 }
 
 //player clicks buttons, loading answers into player array, when done, calls compareArrays function
 playerTurn = function () {
-    console.log('your turn')
-    compareArrays()
+    for (i = 0; i < playerSequence.length; i++)
+        if(playerSequence.length === level) {
+            console.log('did it')
+            compareArrays()
+        } else {
+            //something to say to keep going
+        }
+    console.log(playerSequence)    
 }
 
 compareArrays = function() {
 // playerSequence is compared to gameSequence
     for (i = 0; i < playerSequence.length; i++) {
         if (gameSequence[i] !== playerSequence[i]) {
-// if no match, you lose message displayed
-            console.log('try again')
+// if no match, you lose message displayed   
+        clickResetBtn()
+        console.log('try again')
         } else {
 // if match exact match, nextLevel is called
-    gameTurn()
-    level += 1 
     updateLevel()
         console.log('move to the next level')
-        }
     }
+}
+    playerSequence = []    
+    gameTurn()
         console.log(playerSequence, level)
     }
 
@@ -103,7 +111,7 @@ clickGrnBtn = function() {
         grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
       }, 500);
       playerSequence.push('green')
-    console.log('player moves', playerSequence)
+    //console.log('player moves', playerSequence)
 }
 
 clickRedBtn = function() {
@@ -112,7 +120,7 @@ clickRedBtn = function() {
         redButton.style.backgroundColor = 'rgb(64, 1, 1)'
       }, 500);
       playerSequence.push('red')
-    console.log('player moves', playerSequence)
+    //console.log('player moves', playerSequence)
 }
 
 clickBluBtn = function() {
@@ -121,7 +129,7 @@ clickBluBtn = function() {
         bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
     }, 500);
         playerSequence.push('blue')
-    console.log('player moves', playerSequence)
+    //console.log('player moves', playerSequence)
 }
 
 clickYelBtn = function() {
@@ -130,7 +138,7 @@ clickYelBtn = function() {
         yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
       }, 500);
         playerSequence.push('yellow')
-    console.log('player moves', playerSequence)
+    //console.log('player moves', playerSequence)
 }
 
 //light-up button functions
