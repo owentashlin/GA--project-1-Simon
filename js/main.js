@@ -10,7 +10,7 @@ const startButton = document.querySelector('#start-button')
 const resetButton = document.querySelector('#reset-button')
 const colors = ['green', 'red', 'blue', 'yellow']
 
-let gameText = document.querySelector('instructions')
+let gameText 
 let gameSequence = []
 let playerSequence = []
 let level = 0  
@@ -18,6 +18,10 @@ let level = 0
 //*// functions
 function updateLevel() {
     document.getElementById('level-display').innerHTML = level
+}
+
+function updateGameText() {
+    document.getElementById('game-text').innerHTML = gameText
 }
 
 clickStartBtn = function() {
@@ -32,6 +36,8 @@ clickResetBtn = function() {
     playerSequence = []
     level = 0
     updateLevel()
+    gameText = 'click start to try again'
+    updateGameText()
     startButton.style.color = 'rgb(0, 133, 133)'
     document.getElementById('level-display').innerHTML = ''
     console.log(gameSequence, playerSequence, 'level ' + level, 'reset button clicked')
@@ -41,21 +47,28 @@ clickResetBtn = function() {
 
 gameTurn = function() {
 //*// game iterates through array, repeats finding colors until number of items in array equals level#    
+    gameText = 'Wait and watch'
+    updateGameText()
     level += 1 
+    updateLevel()
     SelectRandomColor()
     gameSequence.forEach(showGameSequence)
-    console.log(gameSequence, 'level ' + level, 'your turn')
+    console.log(gameSequence, 'level ' + level)
         setTimeout(() => {
             playerTurn()
-        }, levelTimer())
+        }, gameLevelTimer())
 }
 
 //*// player clicks buttons, loading answers into player array, when done, calls compareArrays function
 playerTurn = function () {
+    gameText = 'Your Turn'
+    updateGameText()
     for (i = 0; i < playerSequence.length; i++)
         if(playerSequence.length === level) {
             console.log('did it')
-            compareArrays()
+            setTimeout(() => {
+                compareArrays()
+            }, playerTurnTimer())
         } else if (playerSequence < level) {
             // something here to do stuff
         }
@@ -82,8 +95,9 @@ compareArrays = function() {
 //*// button and light functions
 
 //*// get random color for gameSequence
-let SelectRandomColor = function() {
 let randomClr = colors[Math.floor(Math.random() * colors.length)]
+
+let SelectRandomColor = function() {
     if (randomClr === 'green') {
         gameSequence.push('green')
     } else if (randomClr === 'red') {
@@ -107,9 +121,26 @@ showGameSequence = function() {
         }
 }
 
-levelTimer = function() {
-    //need to put in a timer function to graduate up the time per level based on the level number
+gameLevelTimer = function() {
+    if (level <= 3){
+        return 2500
+    } else if (level <= 5){
+        return 4000
+    } else if (level <= 10){
+        return 10000
+    }
 }
+
+playerTurnTimer = function() {
+    if (level <= 3){
+        return 4000
+    } else if (level <= 5){
+        return 6000
+    } else if (level <= 10){
+        return 15000
+    }
+}
+
 
 //*// player click functions
 
