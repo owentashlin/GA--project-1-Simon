@@ -4,9 +4,12 @@ const grnButton = document.querySelector('.green-btn')
 const redButton = document.querySelector('.red-btn')
 const bluButton = document.querySelector('.blue-btn')
 const yelButton = document.querySelector('.yellow-btn')
+
 const startButton = document.querySelector('#start-button')
 const resetButton = document.querySelector('#reset-button')
+
 const colors = ['green', 'red', 'blue', 'yellow']
+
 let gameText 
 let gameSequence = []
 let playerSequence = []

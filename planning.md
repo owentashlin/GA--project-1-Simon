@@ -25,9 +25,6 @@
 
 *complete* need to disable the buttons until it is playerTurn - buttons not disabled, but displayed message telling them to wait 
 
-*Stretch* -for Thrusday
-
-- add tone on button click and mute button
 *complete* update README
 - deploy on github pages
 
