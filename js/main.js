@@ -26,7 +26,6 @@ function updateGameText() {
 }
 
 clickStartBtn = function() {
-    playerWins()
     startButton.style.color = 'red'
     gameTurn()
     updateLevel()
@@ -45,8 +44,7 @@ clickResetBtn = function() {
 }
 
 //*// game play functions
-gameTurn = function() { 
-    //gameSequence.length = level  
+gameTurn = function() {  
     gameText = 'Wait and watch'
         updateGameText()
     level +=1
@@ -57,7 +55,6 @@ gameTurn = function() {
         setTimeout(() => {
             showGameSequence(gameSequence[i - 1])
         }, (500 * i))
-    // console.log(gameSequence)
         setTimeout(() => {
             playerTurn()
         }, turnTimer())
@@ -88,11 +85,8 @@ let arrayMatch
             clickResetBtn()
         } else if (arrayMatch === true) {
             gameTurn()
-            console.log('match')
-        }
-    // if (level === 5)
-    //     playerWins()    
-        console.log(playerSequence, level)
+        }           
+    console.log(playerSequence, level)
 }    
 
 //*// button and light functions
@@ -126,16 +120,6 @@ showGameSequence = function(color) {
         }
 }
 
-// gameLevelTimer = function() {
-//     if (level < 4){
-//         return 1500
-//     } else if (level < 7){
-//         return 3000
-//     } else if (level < 11){
-//         return 6000
-//     }
-// }
-
 turnTimer = function() {
     if (level < 2){
         return 3000
@@ -150,7 +134,13 @@ turnTimer = function() {
     }
 }
 
-playerWins = function() {
+const playerWins = function () {
+    if (level == 2) {
+    playerWinsAnimation()
+    }
+}
+
+playerWinsAnimation = function() {
     //animation plays
         setTimeout(() => {
             lightGrnBtn()
