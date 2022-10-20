@@ -28,7 +28,7 @@
 *Stretch* -for Thrusday
 
 - add tone on button click and mute button
-- update README
+*complete* update README
 - deploy on github pages
 
 *complete* lower delay times on higher levels to increase difficulty

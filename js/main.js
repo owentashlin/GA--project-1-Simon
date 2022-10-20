@@ -43,7 +43,7 @@ gameTurn = function() {
         updateGameText()
     level +=1
         updateLevel()
-    if (level == 2) {
+    if (level == 11) {
         return playerWinsAnimation()
     } else {
         pushRandomColor(randomClr())
