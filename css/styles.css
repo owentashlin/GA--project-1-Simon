@@ -106,17 +106,6 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px gold,inset 5px -5px 25px -3px gold, inset -5px 5px 25px -3px gold;
 }
 
-/* .yellow-btn-lit {
-    width: 195px;
-    height: 195px;
-    background-color: #ffff00;
-    border-radius: 0px 0px 0px 210px;
-    border: 2px solid gold; 
-    position: absolute;
-    margin: 201px 0 0 0;
-    box-shadow: inset 5px 5px 25px -3px gold,inset 5px -5px 25px -3px gold, inset -5px 5px 25px -3px gold;
-} */
-
 .red-btn {
     width: 195px;
     height: 195px;
@@ -126,16 +115,6 @@ h3 {
     border: 2px solid red;
     box-shadow: inset 5px 5px 25px -3px red, inset 5px -5px 25px -3px red, inset -5px 5px 25px -3px red;
 }
-
-/* .red-btn-lit {
-    width: 195px;
-    height: 195px;
-    background-color: red;
-    border-radius: 0px 200px 0px 0px;
-    margin: 0px 0px 0px 2px;
-    border: 2px solid red;
-    box-shadow: inset 5px 5px 25px -3px red, inset 5px -5px 25px -3px red, inset -5px 5px 25px -3px red;
-} */
 
 .blue-btn {
     width: 195px;
@@ -148,21 +127,9 @@ h3 {
     box-shadow: inset 5px 5px 25px -3px blue,inset 5px -5px 25px -3px  blue,inset -5px 5px 25px -3px blue;
 }
 
-/* .blu-btn-lit {
-    width: 195px;
-    height: 195px;
-    background-color: blue;
-    border-radius: 0px 0px 200px 0px;
-    border: 2px solid blue;
-    position: absolute;
-    margin: 201px 0 0 201px;
-    box-shadow: inset 5px 5px 25px -3px blue,inset 5px -5px 25px -3px  blue,inset -5px 5px 25px -3px blue;
-} */
-
 #instructions {
     grid-area: 2 / 4 / 4 / 5;
     padding: 10px;
-    /*border: 1px dotted black;*/
     font-family: 'Silkscreen', cursive;
     color: rgb(3, 200, 0);
     font-size: 24px;

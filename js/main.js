@@ -1,6 +1,5 @@
-console.log("bugs! bugs, everywhere! AAAAAAA!!!!!")
+console.log("my god, it's full of stars")
 
-//*// elements
 const grnButton = document.querySelector('.green-btn')
 const redButton = document.querySelector('.red-btn')
 const bluButton = document.querySelector('.blue-btn')
@@ -10,13 +9,9 @@ const resetButton = document.querySelector('#reset-button')
 const colors = ['green', 'red', 'blue', 'yellow']
 let gameText 
 let gameSequence = []
-//let gameSequenceCounter = 0
 let playerSequence = []
-//let playerSequenceCounter = 0
 let level = 0 
 
-
-//*// functions
 function updateLevel() {
     document.getElementById('level-display').innerHTML = level
 }
@@ -43,14 +38,16 @@ clickResetBtn = function() {
     console.log(gameSequence, playerSequence, 'level ' + level, 'reset button clicked')
 }
 
-//*// game play functions
 gameTurn = function() {  
     gameText = 'Wait and watch'
         updateGameText()
     level +=1
         updateLevel()
+    if (level == 2) {
+        return playerWinsAnimation()
+    } else {
         pushRandomColor(randomClr())
-    console.log(gameSequence)
+    }     
     for (let i = 1; i <= gameSequence.length; i++)    
         setTimeout(() => {
             showGameSequence(gameSequence[i - 1])
@@ -58,7 +55,7 @@ gameTurn = function() {
         setTimeout(() => {
             playerTurn()
         }, turnTimer())
-}
+}    
 
 playerTurn = function () {
     playerSequence = []
@@ -89,8 +86,6 @@ let arrayMatch
     console.log(playerSequence, level)
 }    
 
-//*// button and light functions
-
 let randomClr = function() {
     return colors[Math.floor(Math.random() * colors.length)]
 }
@@ -107,7 +102,6 @@ let pushRandomColor = function(color) {
         }
 }
 
-//remove timers
 showGameSequence = function(color) {
     if (color === 'green') {
         setTimeout(lightGrnBtn(), 1000)
@@ -134,14 +128,7 @@ turnTimer = function() {
     }
 }
 
-const playerWins = function () {
-    if (level == 2) {
-    playerWinsAnimation()
-    }
-}
-
 playerWinsAnimation = function() {
-    //animation plays
         setTimeout(() => {
             lightGrnBtn()
         }, 100)
@@ -188,15 +175,12 @@ playerWinsAnimation = function() {
             lightBluBtn()
         }, 1500)
         setTimeout(lightYelBtn(), 1600)
-       //message is displayed in box
     gameText = "you win!"
     updateGameText()
     setTimeout(() => {
         clickResetBtn()
     }, 2500)
 }
-
-//*// player click functions
 
 clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
@@ -234,7 +218,6 @@ clickYelBtn = function() {
         console.log(playerSequence, 'clicked yellow')
 }
 
-//*// light-up button functions
 lightGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03'
     setTimeout(() => {
@@ -262,8 +245,6 @@ lightYelBtn = function() {
         yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
       }, 250);
 }
-
-//*// event listeners
 
 grnButton.addEventListener('click', clickGrnBtn)
 redButton.addEventListener('click', clickRedBtn)
