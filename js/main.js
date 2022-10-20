@@ -13,7 +13,7 @@ let gameSequence = []
 //let gameSequenceCounter = 0
 let playerSequence = []
 //let playerSequenceCounter = 0
-let level = 1 
+let level = 0 
 
 
 //*// functions
@@ -26,7 +26,7 @@ function updateGameText() {
 }
 
 clickStartBtn = function() {
-    //playerWins()
+    playerWins()
     startButton.style.color = 'red'
     gameTurn()
     updateLevel()
@@ -54,11 +54,13 @@ gameTurn = function() {
         pushRandomColor(randomClr())
     console.log(gameSequence)
     for (let i = 1; i <= gameSequence.length; i++)    
-        setTimeout(showGameSequence(gameSequence[i - 1]), (1000 * i))
+        setTimeout(() => {
+            showGameSequence(gameSequence[i - 1])
+        }, (500 * i))
     // console.log(gameSequence)
         setTimeout(() => {
             playerTurn()
-        }, gameLevelTimer())
+        }, turnTimer())
 }
 
 playerTurn = function () {
@@ -67,7 +69,7 @@ playerTurn = function () {
     updateGameText()
         setTimeout(() => {
             compareArrays()
-        }, playerTurnTimer())
+        }, turnTimer())
     console.log(playerSequence)    
 }
 
@@ -91,7 +93,7 @@ let arrayMatch
     // if (level === 5)
     //     playerWins()    
         console.log(playerSequence, level)
-    }    
+}    
 
 //*// button and light functions
 
@@ -114,40 +116,41 @@ let pushRandomColor = function(color) {
 //remove timers
 showGameSequence = function(color) {
     if (color === 'green') {
-        setTimeout(lightGrnBtn(), 2000)
+        setTimeout(lightGrnBtn(), 1000)
     } else if (color === 'red') {
-        setTimeout(lightRedBtn(), 2000)
+        setTimeout(lightRedBtn(), 1000)
     } else if (color === 'blue') {
-        setTimeout(lightBluBtn(), 2000)
+        setTimeout(lightBluBtn(), 1000)
     } else if (color === 'yellow') {
-        setTimeout(lightYelBtn(), 2000)
+        setTimeout(lightYelBtn(), 1000)
         }
 }
 
-gameLevelTimer = function() {
-    if (level <= 5){
-        return 1500
-    // } else if (level <= 5){
-    //     return 2000
-    // } else if (level <= 10){
-    //     return 6000
-    }
-}
+// gameLevelTimer = function() {
+//     if (level < 4){
+//         return 1500
+//     } else if (level < 7){
+//         return 3000
+//     } else if (level < 11){
+//         return 6000
+//     }
+// }
 
-playerTurnTimer = function() {
-    if (level === 5){
+turnTimer = function() {
+    if (level < 2){
         return 3000
-    // } else if (level <= 5){
-    //     return 6000
-    // } else if (level <= 10){
-    //     return 9000
-    // } else if (level <= 20){
-    //     return 15000
+    } else if (level <= 3){
+        return 4000
+    } else if (level <= 5){
+        return 6000
+    } else if (level <= 7){
+        return 8000
+    } else if (level <= 10){
+        return 12000
     }
 }
 
 playerWins = function() {
-    if (level === 1) {
     //animation plays
         setTimeout(() => {
             lightGrnBtn()
@@ -194,13 +197,13 @@ playerWins = function() {
         setTimeout(() => {
             lightBluBtn()
         }, 1500)
-        setTimeout(() => {
-            lightYelBtn()
-        }, 1600)
+        setTimeout(lightYelBtn(), 1600)
        //message is displayed in box
     gameText = "you win!"
     updateGameText()
-    }
+    setTimeout(() => {
+        clickResetBtn()
+    }, 2500)
 }
 
 //*// player click functions
@@ -209,7 +212,7 @@ clickGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03';
     setTimeout(() => {
         grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
-      }, 500);
+      }, 250);
       playerSequence.push('green')
       console.log(playerSequence, 'clicked green')
 }
@@ -218,7 +221,7 @@ clickRedBtn = function() {
     redButton.style.backgroundColor = '#ff0000'
     setTimeout(() => {
         redButton.style.backgroundColor = 'rgb(64, 1, 1)'
-      }, 500);
+      }, 250);
       playerSequence.push('red')
       console.log(playerSequence, 'clicked red')
 }
@@ -227,7 +230,7 @@ clickBluBtn = function() {
     bluButton.style.backgroundColor = 'rgb(0, 38, 255)'
     setTimeout(() => {
         bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
-    }, 500);
+    }, 250);
     playerSequence.push('blue')
         console.log(playerSequence, 'clicked blue')
 }
@@ -236,7 +239,7 @@ clickYelBtn = function() {
     yelButton.style.backgroundColor = '#ffff00'
     setTimeout(() => {
         yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
-      }, 500);
+      }, 250);
       playerSequence.push('yellow')
         console.log(playerSequence, 'clicked yellow')
 }
@@ -246,28 +249,28 @@ lightGrnBtn = function() {
     grnButton.style.backgroundColor = '#03cb03'
     setTimeout(() => {
         grnButton.style.backgroundColor = 'rgb(0, 61, 0)'
-      }, 500);
+      }, 250);
 }
 
 lightRedBtn = function() {
     redButton.style.backgroundColor = '#ff0000'
     setTimeout(() => {
         redButton.style.backgroundColor = 'rgb(64, 1, 1)'
-        }, 500)
+        }, 250)
 }
 
 lightBluBtn = function() {
     bluButton.style.backgroundColor = '#0000ff'
     setTimeout(() => {
         bluButton.style.backgroundColor = 'rgb(2, 2, 83)'
-    }, 500)
+    }, 250)
 }
 
 lightYelBtn = function() {
     yelButton.style.backgroundColor = '#ffff00'
     setTimeout(() => {
         yelButton.style.backgroundColor = 'rgb(43, 43, 1)'
-      }, 500);
+      }, 250);
 }
 
 //*// event listeners
