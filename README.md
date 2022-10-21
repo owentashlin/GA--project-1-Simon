@@ -2,8 +2,19 @@ Simon Game README
 
 https://owentashlin.github.io/GA--project-1-Simon/
 
+SCREENSHOT
+![screenshot of the game](images/simon%20screenshot.png) 
+
 WIREFRAME
 ![simon game wireframe](images/simon-game-wireframe.jpg)
+
+TECHNOLOGIES USED
+- JavaScript
+- HTML
+- CSS
+
+FUTURE PLANS
+- we will continue to investigate adding sound to the game
 
 background image source: https://openclipart.org/detail/319983/80s-neon-background#google_vignette
 
