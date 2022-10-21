@@ -1,5 +1,7 @@
 Simon Game README
 
+https://owentashlin.github.io/GA--project-1-Simon/
+
 WIREFRAME
 ![simon game wireframe](images/simon-game-wireframe.jpg)
 
