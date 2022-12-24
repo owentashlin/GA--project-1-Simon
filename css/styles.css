@@ -28,6 +28,13 @@ h3 {
     padding: 25px;
 }
 
+footer {
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Silkscreen', cursive;
+    color: rgb(3, 200, 0);
+}
+
 #the-wheel {
     grid-area: 2 / 1 / 5 / 4;
     width: 400px;
@@ -191,3 +198,4 @@ h3 {
     background-color: rgb(0, 148, 148);
     color: red;
 }
+
